@@ -1,0 +1,183 @@
+.historia-page {
+  padding-top: 70px;
+}
+
+/* Hero */
+.historia-hero {
+  height: 50vh;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600') center/cover no-repeat;
+}
+
+.historia-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+}
+
+.historia-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.historia-hero-content h1 {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Content */
+.historia-content {
+  padding: 5rem 1.5rem;
+}
+
+.historia-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.historia-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.historia-quote {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(77, 232, 209, 0.1) 0%, rgba(77, 232, 209, 0.05) 100%);
+  border-left: 4px solid #4DE8D1;
+  border-radius: 0 12px 12px 0;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #1A1A1A;
+  line-height: 1.6;
+}
+
+/* Galería */
+.historia-galeria {
+  padding: 5rem 1.5rem;
+  background: #F5F5F5;
+}
+
+.galeria-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galeria-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1A1A1A;
+  margin-bottom: 3rem;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.galeria-item {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.galeria-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Valores */
+.historia-valores {
+  padding: 5rem 1.5rem;
+}
+
+.valores-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.valores-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1A1A1A;
+  margin-bottom: 3rem;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.valor {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valor:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.valor-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem;
+  background: rgba(77, 232, 209, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4DE8D1;
+}
+
+.valor h3 {
+  font-size: 1.5rem;
+  color: #1A1A1A;
+  margin-bottom: 1rem;
+}
+
+.valor p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .historia-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .historia-text p {
+    font-size: 1.05rem;
+  }
+
+  .historia-quote {
+    font-size: 1.2rem;
+    padding: 1.5rem;
+  }
+
+  .galeria-container h2,
+  .valores-container h2 {
+    font-size: 2rem;
+  }
+}

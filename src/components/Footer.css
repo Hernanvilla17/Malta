@@ -1,0 +1,133 @@
+.footer {
+  background: #1A1A1A;
+  color: #fff;
+  padding: 5rem 1.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-glow {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(77, 232, 209, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(77, 232, 209, 0.3), transparent);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-brand {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.footer-logo-img {
+  height: 80px;
+  width: auto;
+  margin: 0 auto 1rem;
+  object-fit: contain;
+  border-radius: 12px;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
+}
+
+.footer-tagline {
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.footer-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.footer-section h4 {
+  color: #4DE8D1;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.footer-section p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.social-link,
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.social-link svg,
+.whatsapp-link svg {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover,
+.whatsapp-link:hover {
+  color: #4DE8D1;
+}
+
+.social-link:hover svg,
+.whatsapp-link:hover svg {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  .footer-info {
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .social-link,
+  .whatsapp-link {
+    justify-content: center;
+  }
+}

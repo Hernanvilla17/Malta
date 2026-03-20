@@ -1,0 +1,237 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Transparente en landing sin scroll */
+.header-transparent {
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.header-transparent .nav-link,
+.header-transparent .cart-button {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.header-transparent .hamburger,
+.header-transparent .hamburger::before,
+.header-transparent .hamburger::after {
+  background: #fff;
+}
+
+/* Glassmorphism default */
+.header:not(.header-transparent) {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Scrolled - solid dark */
+.header-scrolled {
+  background: rgba(26, 26, 26, 0.95) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.header-scrolled .nav-link,
+.header-scrolled .cart-button {
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+.header-scrolled .hamburger,
+.header-scrolled .hamburger::before,
+.header-scrolled .hamburger::after {
+  background: #fff !important;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+  border-radius: 8px;
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #1A1A1A;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #4DE8D1, #3dd4be);
+  transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(77, 232, 209, 0.5);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #4DE8D1 !important;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.cart-button {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem;
+  color: #1A1A1A;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.cart-button:hover {
+  color: #4DE8D1 !important;
+  background: rgba(77, 232, 209, 0.1);
+}
+
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #4DE8D1, #3dd4be);
+  color: #1A1A1A;
+  font-size: 0.7rem;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(77, 232, 209, 0.4);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #1A1A1A;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #1A1A1A;
+  transition: transform 0.3s ease;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.hamburger.open {
+  background: transparent;
+}
+
+.hamburger.open::before {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.open::after {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 26, 26, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .nav-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+    color: #fff !important;
+  }
+
+  .header-scrolled .hamburger.open,
+  .header-scrolled .hamburger.open::before,
+  .header-scrolled .hamburger.open::after {
+    background: transparent;
+  }
+}
