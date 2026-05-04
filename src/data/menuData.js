@@ -265,8 +265,8 @@ export const historia = {
   ],
   frase_destacada: 'Hecha con cariño y la mejor calidad, hasta tu puerta.',
   galeria: [
-    'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800',
-    'https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800',
-    'https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=800'
+    '/historia-1.jpeg',
+    '/historia-2.jpeg',
+    '/historia-3.jpeg'
   ]
 };

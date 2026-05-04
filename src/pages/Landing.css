@@ -11,7 +11,7 @@
 .hero-bg {
   position: absolute;
   inset: -50px;
-  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600') center/cover no-repeat;
+  background: url('/home-hero.jpg') center/cover no-repeat;
   will-change: transform;
 }
 

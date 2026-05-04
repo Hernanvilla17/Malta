@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background: url('https://images.unsplash.com/photo-1543353071-10c8ba85a904?w=1600') center/cover no-repeat;
+  background: url('/menu-hero.png') center/cover no-repeat;
 }
 
 .menu-hero-overlay {
